@@ -1,0 +1,45 @@
+body{
+   font: 16px Arial, Helvetica, sans-serif;
+    background:  #d2d2c1 url("imagens/capa.png");
+    background-repeat: no-repeat;
+    /* background-size: 900px; */
+    background-attachment: scroll;
+   
+    /* background-position: center top; */
+}
+#principal{
+    width: 900px;
+}
+
+#menu{
+    background: #c5c5b2;
+    padding: 18px;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+    color: #4b566a;
+}
+
+#conteudo{
+    background-color: #e8e8e8;
+    margin-top: 5px;
+    padding: 10px;
+    
+}
+
+h1{
+    font-size: 1.2em;
+    color: #828271;
+}
+
+#rodape{
+    text-align: center;
+    color: #aa7c25;
+}
+
+.img-campanha{
+    border: 10px  #c3c3ae solid ;
+    text-align: center
+}
