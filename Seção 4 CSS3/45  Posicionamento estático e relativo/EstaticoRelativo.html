@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento estático e relativo</title>
+    <style>
+body{
+    background: #008fc7;
+}
+
+#container{
+    widows: 800px;
+    background: #fff;
+    margin: 10px auto ;
+}
+h1{
+    position: static;/*  padrão */
+}
+p{
+    width: 400px;
+}
+.relative{
+    border: 5px solid green;
+    position: relative;
+    right: 0px;
+    top: 0px;
+}
+
+.absolut{
+    border: 5px solid green;
+    position: absolute;
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+<h1>Posicionamento</h1>
+<p> P1   Lorem Ipsum é simplesmente um texto 
+    fictício da indústria tipográfica e de impressão. 
+    Lorem Ipsum tem sido o texto fictício padrão da indústria desde
+    os anos 1500, quando um impressor desconhecido pegou uma galera de 
+    tipos e os embaralhou para fazer um livro de
+</p>
+<p class="absolut">P2  Lorem Ipsum é simplesmente um texto 
+    fictício da indústria tipográfica e de impressão. 
+    Lorem Ipsum tem sido o texto fictício padrão da indústria desde
+    os anos 1500, quando um impressor desconhecido pegou uma galera de 
+    tipos e os embaralhou para fazer um livro de
+</p>
+<p> P3 Lorem Ipsum é simplesmente um texto 
+    fictício da indústria tipográfica e de impressão. 
+    Lorem Ipsum tem sido o texto fictício padrão da indústria desde
+    os anos 1500, quando um impressor desconhecido pegou uma galera de 
+    tipos e os embaralhou para fazer um livro de
+</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobrepondo elementos</title>
+    <style>
+        .cont1{
+            background-color: red;
+            width: 300px;
+            height: 150px;
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            z-index: 11;
+        }
+        .cont2{
+            background-color: gold;
+            width: 300px;
+            height: 150px;
+            top: 180;
+            left: 50px;
+            position: relative;
+            z-index: 9;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        conteudo one
+    </div>
+    <div class="cont2">
+        conteudo 2
+    </div>
+</body>
+</html>

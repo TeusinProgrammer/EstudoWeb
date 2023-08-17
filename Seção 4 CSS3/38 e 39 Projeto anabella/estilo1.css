@@ -1,0 +1,50 @@
+body {
+	
+	background: #d2d2c1 url('imagens/fundo.css');/* foi adicionada duas cores sendo uma a cor normal 
+	e a outra uma imagens de mesma cor, foi feito isso para prevenir de caso a cor não estiver disponivel
+	tera a imagens como reserva . CASO queira que a imagen não se repita pela tela toda, acressente: 
+	no-repeat ao lado da url*/
+
+	font: 16px Arial, Helvetica, sans-serif;
+}
+
+#principal {
+	width: 900px; 
+}
+
+#menu {
+	background: #c5c5b2;
+	padding: 15px;
+	background-attachment: local;
+}
+
+
+#conteudo {
+	background: #e8e8d9;
+	padding: 15px ;
+}
+
+#rodape{
+	text-align: center;
+}
+
+
+.img-campanha {
+	border: 10px solid #c3c3ae;
+	
+}
+
+a {
+	
+	color: #4b566a;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 15px;
+
+}
+
+h1 {
+	color: #828271;
+	font-size: 1.2em;
+}
+
