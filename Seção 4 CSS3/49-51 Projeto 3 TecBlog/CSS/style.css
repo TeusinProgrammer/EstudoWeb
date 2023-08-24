@@ -16,15 +16,12 @@ body {
 .spanBranco {
   color: rgb(255, 255, 255);
 }
-.titulo {
-  margin: 20px;
-}
-
-.menu {
+.titulo, .menu {
   margin: 10px;
 }
 a {
   text-decoration: none;
+  padding: 10px;
 }
 .linkTitulo:hover {
   background-color: #fff;
@@ -34,4 +31,12 @@ a {
 a:visited,
 a:link {
   color: #fff;
+}
+
+#area-principal{
+    background: white;
+    margin: 0 auto  ;
+}
+.postagens{
+  border: #f7b600 solid 1px;
 }
