@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var data = new Date();
+        document.writeln(data.toString());
+        data.setDate(data.getDate()+1);
+        document.writeln('Ola' +data.getDate());
+        document.writeln('<hr>')
+        
+        document.writeln(data.toString());
+        data.setMonth(data.getMonth()+2);
+        document.writeln('Mes alterado: ' +data.getMonth());
+        document.writeln(data.toString());
+        document.writeln('<hr>');
+        
+        var dataA = new Date('2001/07/05');
+        document.writeln((data.getTime())/(24*30*12*60*60*1000) +'  milisegundos');
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

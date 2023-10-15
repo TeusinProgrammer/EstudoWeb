@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando valores inputs</title>
+
+</head>
+<body>
+    Insira os dados <br/>
+    <input type="text" id="valor" onkeydown="verificarCaracter()"><br/><br/>
+    Letras:
+    <input type="text" disabled="disabled" id="isString">
+    Numeros 
+    <input type="text" id="isNumber"  disabled="disabled"><br/><br/>
+    <input type="button" value="verificar" onclick="verificarCaracter()">
+</body>
+<script>
+function verificarCaracter(){
+    var dado = document.getElementById('valor').value;
+    switch(dado){
+        case "0":
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+        document.getElementById('isNumber').value += dado
+        break
+default:
+        document.getElementById('isString').value += dado;
+    }
+}
+</script>
+</html>

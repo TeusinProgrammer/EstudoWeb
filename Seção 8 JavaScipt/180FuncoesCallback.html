@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+
+        function exibirArtigo(id, callbaksucesso, callbackErro){
+                if (false) {
+                    callbaksucesso('Funcoes de callback','Funcoes de callback sao muito usadas...')
+                } else {
+                    callbackErro( 'Erro ao recuperar dados')
+                }
+        }
+        var callbaksucesso = function(titulo, descricao){
+            document.write('<h1>' +titulo+ '<h1/>')
+            document.write('<hr/>')
+            document.write('<p><b>' +descricao+ '<p/>')
+        };
+        var callbackErro = function(erro){
+            document.write('<h1>' +erro+ '<h1/>')
+            };
+
+        // será executado dentro da função quando passar o paramatro
+       exibirArtigo(1,callbaksucesso,callbackErro);
+
+//         //deve executar aquela função no momento em que ela for passada pelo parâmetro.
+            // Ou seja o interpretador do JavaScript chega nesse ponto que entende que aqui deve haver a execução para
+            // que aí sim o valor dessa execução seja encaminhada por parâmetro.
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var keyDown = ()=>alert('Evento disparado. apos a execucao do alert sera executado o resto da funcao')
+    var keyPress = ()=>alert('Mesmo que KeyDown. o que muda é a tecla que esta clicando, se for diferente de "ctrl","alt"... tera o evento disparado, caso contrario nao acontecera nada')
+        var keyUP = ()=>alert('Alert sera mostrado apos conclusao do Evento disparado. ')
+
+    </script>
+</head>
+<body>
+    OnkeyDown <br/>
+    <input type="text" value="" onkeydown="keyDown()"><br/><br/>
+    OnkeyPress <br/>
+    <input type="text" value="" onkeypress="keyPress()"><br/><br/>
+    OnkeyUp <br/>
+    <input type="text" value="" onkeyup="keyUP()"><br/><br/>
+</body>
+</html>
