@@ -16,9 +16,9 @@
 </head>
 <body>
     Manipulando estilo <br/><br>
-    <input type="button" value="Vermelho" onclick="trocarCor('red')">
-    <input type="button" value="verde" onclick="trocarCor('green')">
-    <input type="button" value="Azul" onclick="trocarCor('blue')"><br><br>
+    <input type="button" value="Vermelho" onclick="trocarCor('red','90px','250px')">
+    <input type="button" value="verde" onclick="trocarCor('green','10px','60px')">
+    <input type="button" value="Azul" onclick="trocarCor('blue','100px','300px')"><br><br>
 
     <div id="cor">
 
@@ -26,9 +26,12 @@
 
 </body>
 <script>
-function trocarCor(color){
+function trocarCor(color, l, a){
     var div = document.getElementById('cor');
     div.style.backgroundColor=color;
+    div.style.height = a;
+    div.style.width = l;
+
 }
 </script>
 </html>

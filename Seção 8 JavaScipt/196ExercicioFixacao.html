@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de fixação</title>
+</head>
+<body>
+    <input type="text" id="exercicio" onfocus="focusFunc('yellow')" onblur="Blur()">
+    <script>
+        var campo =  document.getElementById('exercicio');
+        var focusFunc = (color)=>campo.style.background = color;
+
+        function Blur(){
+            var qtdCara = document.getElementById('exercicio').value.length;
+            console.log(qtdCara);
+        if (qtdCara>=3) {
+            campo.style.background = 'green'
+        } else {
+            campo.style.background = 'red'
+        }
+        }
+        
+
+    </script>
+</body>
+</html>

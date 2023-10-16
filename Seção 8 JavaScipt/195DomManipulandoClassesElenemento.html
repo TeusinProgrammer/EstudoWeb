@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando classes de elementos</title>
+<style>
+    .marca{
+background-color: rgb(46, 44, 44);
+margin: 20px 20px;
+width: 200px;
+height: 150px;
+    }
+    .marca2{
+        background-color: rgb(68, 11, 175);
+margin: 20px 20px;
+width: 400px;
+height: 15  0px;
+padding: 200px 25px;
+    }
+</style>
+<script>
+    var ativar = () => {
+        var atual = document.getElementById('manipular').className = 'marca2';
+    }
+</script>
+</head>
+<body>
+    <div class="marca" id="manipular" placeholder="escreva">Modificando tudo</div>
+    <input type="button" value="testar" id="executar" onclick="ativar()">
+</body>
+</html>
