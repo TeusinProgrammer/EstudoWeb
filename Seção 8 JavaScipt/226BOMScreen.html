@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+   
+</head>
+<body>
+    <script>
+
+        var windowH = window.innerHeight;
+        var windowW = window.innerWidth;
+        
+        var screenH = window.screen.availHeight;
+        var screenW = window.screen.availWidth;
+ 
+        if (screenH>700) {
+         document.write("<h2 id='jumento'> altura Window  "+windowH+"</h2><b>");
+            
+            document.getElementById('jumento').style.color = 'red';
+        } else {
+            document.write("<h2 id='jumento'> altura Window  "+windowH+"</h2><b>");
+                document.getElementById('jumento').style.color = 'blue';
+                
+        }
+        document.write('<hr/>') 
+    
+       document.write('<h1> altura Window  '+windowH+'</h1><b>')
+        document.write('<h1> largura Window '+windowW+'</h1>') 
+        document.write('<hr/>') 
+        document.write('<h1> altura Screen: '+screenH+'</h1><b>')
+        document.write('<h1> largura Screen: '+screenW+'</h1>')  
+    </script>
+</body>
+</html>

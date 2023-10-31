@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <p id="status"></p>
+    <p id="st"></p>
+    <script>
+        var lastInteraction = Date.now();
+        var timeRE = 3;
+        var timeRE2 = 2;
+        var timeoutID;
+
+        function formatTime(date) {
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var second = date.getSeconds();
+            return hours + ":" + (minutes < 10 ? "0" : "") +minutes+(second < 10 ? "0" : "") + ":" + second;
+        }
+
+        function updateInteraction() {
+            lastInteraction = Date.now();
+            var currentTime = new Date();
+            document.getElementById('status').textContent = 'Interagiu às ' + formatTime(currentTime);
+            clearTimeout(timeoutID);
+            startCountdown();
+        }
+
+        function startCountdown() {
+            timeoutID = setTimeout(function () {
+                var currentTime = new Date();
+                document.getElementById('st').textContent = 'Seu navegador será encerrado em ' + formatTime(currentTime) + ' - ' + timeRE + ' minutos';
+                timeRE--;
+                if (timeRE === 0) {
+                    setInterval(function () {
+                        document.write('<p>FECHEI ' + timeRE2 + '</p>');
+                        timeRE2--;
+                        if (timeRE2 === 0) {
+                            close();
+                        }
+                    }, 1000);
+                }
+            }, 1000); // Contagem regressiva de 1 minuto (60.000 milissegundos)
+        }
+
+        startCountdown();
+
+        document.addEventListener('mousemove', updateInteraction);
+    </script>
+</body>
+</html>

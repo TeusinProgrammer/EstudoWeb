@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <button id="demo" onclick="ativar()">entrar</button>
+
+    <button type="button" onclick="loadpag()">recarregar</button>
+    
+    <button type="button" onclick="sustitui()">substituir documento</button>
+
+    <script>
+      function ativar(){
+        window.location.href = "http://www.facebook.com"
+        document.getElementById("demo").innerHTML = "Page location is " + window.location.protocol;
+  
+      }
+      //recarrega a pagina
+      function loadpag(){
+        window.location.reload();
+      }
+      //substituir o documento atual por um novo
+      function sustitui(){
+        window.location.replace('http://www.facebook.com');
+      }
+      </script>
+    <p id="demo">as</p>
+</body>
+</html>

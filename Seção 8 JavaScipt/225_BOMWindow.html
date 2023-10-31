@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>DOM</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script >
+        var taa = window.innerHeight;
+        var taa2 = window.innerWidth;
+
+        var tela;
+        function openWin(){
+            //tela=window.open('https://www.youtube.com/watch?v=qnU4_duQDgA&list=PLmMOdauitSEcZb7RrYBQP0apmPs2bXAqb&index=3', 'with=200, heigth=500')
+        document.write('<h1> altura '+taa+'</h1><b>')
+        document.write('<h1> largura '+taa2+'</h1>')
+        }
+        function closeWin(){
+            tela.close()
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="openWin()">Abrir aaa</button>
+    <button type="button" onclick="closeWin()">fechar aaa</button>
+</body>
+</html>
