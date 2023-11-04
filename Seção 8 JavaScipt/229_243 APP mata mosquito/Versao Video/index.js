@@ -32,20 +32,23 @@ function gerarMosquito(){
     imgGerada.style.top = alturaAle+'px';
     imgGerada.style.left = larguraAle+'px';
     
-    var botao = document.createElement('button').appendChild(imgGerada);
+    var botao = document.createElement('button');
+    botao.appendChild(imgGerada);
     botao.addEventListener('click', ()=> {
-        var btn = document.querySelector('button');
-        for (let index = 0; index < btn.length; index++) {
-            document.write(btn[index]);
-
-            document.body.removeChild(btn[index]);
-            
-        }});
+        botao.addEventListener('click', function() {
+            document.body.removeChild(botao);
+        })});
 
     document.body.appendChild(botao);
 }
 
-
+function removerTodosMosquitos() {
+    var botoes = document.querySelectorAll('button');
+    
+    for (var i = 0; i < botoes.length; i++) {
+        document.body.removeChild(botoes[i]);
+    }
+}
 
 
 
