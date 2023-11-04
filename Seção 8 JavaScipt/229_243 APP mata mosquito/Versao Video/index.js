@@ -18,7 +18,7 @@ function gerarCemMosquitos() {
 function gerarMosquito(){
     ajustarTamaho()
     // define tamanho de 50 a 100
-    var tamanho = Math.random()*50+50;
+    var tamanho = Math.ceil(Math.random()*50)+50;
     //para posicionar o elementos criados sera preciso pegar o tamaho da janela menos o tamanho do elemento
     var alturaAle = (altura-tamanho)*Math.random();
     var larguraAle = (largura-tamanho)*Math.random();
@@ -26,8 +26,7 @@ function gerarMosquito(){
     
     var imgGerada = document.createElement('img');
     imgGerada.src = "imagens/mosca.png";
-    imgGerada.width =  tamanho;
-    imgGerada.height =  tamanho;
+    imgGerada.width , imgGerada.height =  tamanho;
     imgGerada.style.position = 'absolute';
     imgGerada.style.top = alturaAle+'px';
     imgGerada.style.left = larguraAle+'px';
