@@ -3,7 +3,8 @@ var largura=0;
 var contCriado = 0;
 var contPego = 0;
 var interval
-var time = 10;
+var timeValue = 10;
+var timeCreate = 1500;
 
 function ajustarTamaho(){
     altura = window.innerHeight;
@@ -16,8 +17,8 @@ function gerarCemMosquitos() {
     }
 }
 function gerarMosquito(){
-    contCriado++;
-    document.getElementById('mos').textContent = 'Value: '+time;
+    
+    document.getElementById('tempo').textContent = 'tempo: '+timeValue;
     ajustarTamaho()
     // define tamanho de 50 a 100
     var tamanho = Math.random()*50+50;
@@ -40,42 +41,56 @@ var positionX = Math.random() > 0.5 ? 1 : -1;
 
 imgGerada.style.transform =  'scaleX('+positionX+')';
 
+contCriado++;
+            document.getElementById('qtdFeito').textContent = 'qtdFeito: '+contCriado;
     var botao = document.createElement('button');
     botao.appendChild(imgGerada);
     botao.addEventListener('click', ()=> {
         botao.addEventListener('click', function() {
             document.body.removeChild(botao);
-            time+=2;
+            timeValue+=1;
             contPego++;
-            document.getElementById('mos').textContent = 'Value: '+time;
+            document.getElementById('tempo').textContent = 'tempo: '+timeValue;
             document.getElementById('qtdPego').textContent = 'qtdPego: '+contPego;
             document.getElementById('qtdFeito').textContent = 'qtdFeito: '+contCriado;
             if (contPego===contCriado) {
-                document.getElementById('mos').textContent = 'Voce ganhou!!!';
-            stopGerar()
+                document.getElementById('tempo').textContent = 'Voce ganhou!!!';
+            stopGerar(interval)
             } 
+            if(contPego > 5 && contCriado  > 7) {
+                timeCreate=500
+            }
         })});
 
     document.body.appendChild(botao);
 }
 
  function gerarMomentaneo(){
-    interval = setInterval(()=>{
-        gerarMosquito();
-        
-    },1500)
 
-    function time(){
-        contTemp = setInterval()
+    interval = setInterval(()=>{
+        gerarMosquito();        
         
-    }
+    },timeCreate);
+    
+
+   
  }
- function  stopGerar (){
-    clearInterval(interval)
-    time=10;
-    document.getElementById('mos').textContent = 'Value: '+time;
+ function time(){
+    contTemp = setInterval(()=>{
+        timeValue-=1;
+        document.getElementById('tempo').textContent = 'tempo: '+timeValue;
+        if (timeValue<1) {
+            stopGerar(contTemp)
+            stopGerar(interval)
+        }
+    },1000);
+
+}
+ function  stopGerar (valu){
+    clearInterval(valu)
+    timeValue=10;
+    document.getElementById('tempo').textContent = 'tempo: '+timeValue;
  }
- stopGerar
 
 function removerTodosMosquitos() {
     var botoes = document.querySelectorAll('button');
